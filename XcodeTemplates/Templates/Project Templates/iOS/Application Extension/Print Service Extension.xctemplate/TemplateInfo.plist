@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.iosprintserviceextension</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.iosAppExtensionBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds a Print Service application extension.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.printServiceExtension</string>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>PrintService.h</string>
+                        <string>PrintService.m</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>PrintService.h</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>PrintService.h</string>
+                        </dict>
+                        <key>PrintService.m</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>PrintService.m</string>
+                        </dict>
+                    </dict>
+                </dict>
+                <key>Swift</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>PrintService.swift</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>PrintService.swift</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>PrintService.swift</string>
+                        </dict>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:NSExtension</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.printing.discovery</string>
+    <key>NSExtensionPrincipalClass</key>
+    <string>___VARIABLE_moduleNamePrefixForClasses:XML___PrintService</string>
+</dict>
+]]></string>
+    </dict>
+    <key>Image</key>
+    <dict>
+        <key>SystemSymbolName</key>
+        <string>printer</string>
+    </dict>
+</dict>
+</plist>

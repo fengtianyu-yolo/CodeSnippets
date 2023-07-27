@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.shield-configuration.ios</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.iosAppExtensionBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template creates a shield configuration application extension.</string>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Override</key>
+            <string>Swift</string>
+        </dict>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.shieldConfigurationExtension</string>
+            <key>Frameworks</key>
+            <array>
+                <string>ManagedSettings</string>
+                <string>ManagedSettingsUI</string>
+            </array>
+            <key>SharedSettings</key>
+            <dict>
+                <key>CODE_SIGN_ENTITLEMENTS</key>
+                <string>___PACKAGENAME___/___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>ShieldConfigurationExtension.swift</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+        <string>Info.plist:NSExtension</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>ShieldConfigurationExtension.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>ShieldConfigurationExtension.swift</string>
+        </dict>
+        <key>___PACKAGENAMEASIDENTIFIER___.entitlements</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            <key>SortOrder</key>
+            <integer>1000</integer>
+            <key>TargetIdentifiers</key>
+            <array/>
+        </dict>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPrincipalClass</key>
+    <string>___VARIABLE_moduleNamePrefixForClasses:XML___ShieldConfigurationExtension</string>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.ManagedSettingsUI.shield-configuration-service</string>
+</dict>
+]]></string>
+    </dict>
+    <key>Image</key>
+    <dict>
+        <key>BundleImageName</key>
+        <string>gearshape.shield</string>
+        <key>BundleIdentifier</key>
+        <string>com.apple.dt.IDEKit</string>
+    </dict>
+</dict>
+</plist>

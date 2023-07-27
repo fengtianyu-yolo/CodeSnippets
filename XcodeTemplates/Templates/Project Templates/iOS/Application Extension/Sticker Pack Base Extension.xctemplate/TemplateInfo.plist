@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.stickerpackextensionbaseios</string>
+    <!-- This cannot inherit from com.apple.dt.unit.iosAppExtensionBase because stickerpacks want to have non-standard target definition. So there's some duplication here. -->
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.bundleBase</string>
+        <string>com.apple.dt.unit.iosBase</string>
+    </array>
+    <key>OptionConstraints</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>bundleIdentifierPrefix</string>
+            <key>ConstraintType</key>
+            <string>RequirementIfAssociatedTarget</string>
+            <key>Value</key>
+            <string>___ASSOCIATEDTARGET_bundleIdentifier___</string>
+        </dict>
+    </array>
+    <key>AssociatedTargetSpecification</key>
+    <dict>
+        <key>PopUpTitle</key>
+        <string>Embed in Application:</string>
+        <key>PopUpDescription</key>
+        <string>The application target that will host this new extension. The application will be set up to embed the new extension.</string>
+        <key>AllowableProductTypes</key>
+        <array>
+            <string>com.apple.product-type.application</string>
+        </array>
+        <key>AllowablePlatforms</key>
+        <array>
+            <string>com.apple.platform.iphoneos</string>
+        </array>
+        <key>AssociatedTargetIsDependent</key>
+        <true/>
+        <key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
+        <true/>
+    </dict>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>ProductType</key>
+            <string>com.apple.product-type.app-extension.messages-sticker-pack</string>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.stickerPackExtension</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>SKIP_INSTALL</key>
+                <string>YES</string>
+                <key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+                <string>iMessage App Icon</string>
+                <key>INFOPLIST_FILE</key>
+                <string>___PACKAGENAME___/Info.plist</string>
+            </dict>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>Resources</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:DisplayName</string>
+        <string>Info.plist:NSHumanReadableCopyright</string>
+        <string>Info.plist:NSExtension</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:DisplayName</key>
+        <string><![CDATA[<key>CFBundleDisplayName</key>
+<string>___PACKAGENAME___</string>
+]]></string>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.message-payload-provider</string>
+    <key>NSExtensionPrincipalClass</key>
+    <string>StickerBrowserViewController</string>
+</dict>
+]]></string>
+    </dict>
+</dict>
+</plist>

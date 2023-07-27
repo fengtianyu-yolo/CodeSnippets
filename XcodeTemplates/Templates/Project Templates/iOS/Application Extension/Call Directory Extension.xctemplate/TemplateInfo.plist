@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.calldirectoryextensionios</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.iosAppExtensionBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds a Call Directory application extension. (This extension and the app it is bundled with must be 64-bit only.)</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.callDirectoryExtension</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>ARCHS</key>
+                <string>$(ARCHS_STANDARD_64_BIT)</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <array>
+                    <dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>CallDirectoryHandler.h</string>
+                            <string>CallDirectoryHandler.m</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>CallDirectoryHandler.h</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>CallDirectoryHandler.h</string>
+                            </dict>
+                            <key>CallDirectoryHandler.m</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>CallDirectoryHandler.m</string>
+                            </dict>
+                        </dict>
+                    </dict>
+                </array>
+                <key>Swift</key>
+                <array>
+                    <dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>CallDirectoryHandler.swift</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>CallDirectoryHandler.swift</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>CallDirectoryHandler.swift</string>
+                            </dict>
+                        </dict>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:NSExtension</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPrincipalClass</key>
+    <string>___VARIABLE_moduleNamePrefixForClasses:XML___CallDirectoryHandler</string>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.callkit.call-directory</string>
+</dict>
+]]></string>
+    </dict>
+	<key>Image</key>
+	<dict>
+		<key>SystemSymbolName</key>
+		<string>phone</string>
+	</dict>
+</dict>
+</plist>

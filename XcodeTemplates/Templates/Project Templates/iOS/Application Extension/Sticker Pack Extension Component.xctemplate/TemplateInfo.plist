@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.stickerpackextensioncomponentios</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.stickerpackextensionbaseios</string>
+    </array>
+    <key>SuppressTopLevelGroup</key>
+    <true/>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>SharedSettings</key>
+            <dict>
+                <key>PRODUCT_BUNDLE_IDENTIFIER</key>
+                <string>___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___.StickerPackExtension</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Stickers.xcstickers</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <!-- Redeclare the Info.plist file node from bundle base so we can request that it not be inserted into the group sturcture at all. -->
+        <key>Info.plist</key>
+        <dict>
+            <key>Beginning</key>
+            <string><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+]]></string>
+            <key>End</key>
+            <string><![CDATA[</dict>
+</plist>]]></string>
+            <key>Indent</key>
+            <integer>1</integer>
+            <key>SortOrder</key>
+            <integer>200</integer>
+            <key>TargetIdentifiers</key>
+            <array/>
+            <key>SubstituteMacros</key>
+            <true/>
+            <key>OmitFromProjectStructure</key>
+            <true/>
+        </dict>
+        <key>Info.plist:DisplayName</key>
+        <string><![CDATA[<key>CFBundleDisplayName</key>
+<string>___VARIABLE_productName___</string>
+]]></string>
+        <key>Stickers.xcstickers</key>
+        <dict>
+            <key>Path</key>
+            <string>Stickers.xcstickers</string>
+            <key>SortOrder</key>
+            <integer>100</integer>
+            <key>TargetIdentifiers</key>
+            <array>
+                <string>com.apple.dt.stickerPackExtension</string>
+                <string>com.apple.dt.stickerPackApp</string>
+            </array>
+        </dict>
+    </dict>
+</dict>
+</plist>
